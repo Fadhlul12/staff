@@ -997,24 +997,24 @@ body.public-page {
 }
 
 .hero-stat-card {
-    background: #ffffff;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border: 1px solid #e2e8f0;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: var(--radius-lg);
     padding: 1.25rem 1.1rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
     transition: var(--transition);
 }
 
 .hero-stat-card:hover {
     transform: translateY(-3px);
-    background: #ffffff;
-    border-color: #cbd5e1;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    background: rgba(15, 23, 42, 0.72);
+    border-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
 }
 
 .hero-stat-card .stat-icon {
@@ -1028,10 +1028,10 @@ body.public-page {
     flex-shrink: 0;
 }
 
-.hero-stat-card .stat-icon.total { background: #fef3c7; color: #d97706; }
-.hero-stat-card .stat-icon.kantor { background: #dcfce7; color: #16a34a; }
-.hero-stat-card .stat-icon.dinas { background: #fef9c3; color: #ca8a04; }
-.hero-stat-card .stat-icon.cuti { background: #fee2e2; color: #dc2626; }
+.hero-stat-card .stat-icon.total { background: rgba(251, 191, 36, 0.2); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); }
+.hero-stat-card .stat-icon.kantor { background: rgba(34, 197, 94, 0.2); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.4); }
+.hero-stat-card .stat-icon.dinas { background: rgba(234, 179, 8, 0.2); color: #facc15; border: 1px solid rgba(234, 179, 8, 0.4); }
+.hero-stat-card .stat-icon.cuti { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
 
 .hero-stat-card .stat-info {
     display: flex;
@@ -1042,13 +1042,13 @@ body.public-page {
 .hero-stat-card .stat-number {
     font-size: 1.8rem;
     font-weight: 800;
-    color: #0f172a;
+    color: #ffffff;
     line-height: 1;
 }
 
 .hero-stat-card .stat-label {
     font-size: 0.8rem;
-    color: #475569;
+    color: #cbd5e1;
     font-weight: 600;
     margin-top: 4px;
 }
