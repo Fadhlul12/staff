@@ -405,7 +405,7 @@ ul { list-style: none; }
     overflow-y: auto;
     scrollbar-width: thin;
 }
-}
+
 
 .detail-profile-card {
     display: flex;
@@ -997,24 +997,24 @@ body.public-page {
 }
 
 .hero-stat-card {
-    background: rgba(15, 23, 42, 0.55);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(15, 23, 42, 0.22);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
     border-radius: var(--radius-lg);
     padding: 1.25rem 1.1rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: var(--transition);
 }
 
 .hero-stat-card:hover {
     transform: translateY(-3px);
-    background: rgba(15, 23, 42, 0.72);
-    border-color: rgba(255, 255, 255, 0.45);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+    background: rgba(15, 23, 42, 0.4);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
 }
 
 .hero-stat-card .stat-icon {
