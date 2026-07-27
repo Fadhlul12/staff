@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - BKPSDM Kota Dumai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="public-page">
+
+    <!-- Navbar Public -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon-wrapper">
+                    <img src="assets/img/logo-bkpsdm.jpg" alt="Logo BKPSDM Dumai" class="logo-img">
+                </div>
+                <div>
+                    <span class="logo-title">BKPSDM Kota Dumai</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Direktori Staf</a>
+                <a href="faq.html">F&Q / Bantuan</a>
+                <a href="kontak.html" class="active">Hubungi Kami</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://bkpsdm.dumaikota.go.id" target="_blank" class="btn-back-main">
+                    <i class="ph ph-arrow-left"></i> Web Utama Dumai
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Halaman Kontak -->
+    <section class="public-hero">
+        <div class="hero-content">
+            <div class="badge-subtitle">
+                <i class="ph-fill ph-envelope-simple-open"></i> Layanan Informasi Resmi
+            </div>
+            <h1>Hubungi Kami</h1>
+            <p>Ada pertanyaan, saran, atau memerlukan bantuan informasi kepegawaian? Tim BKPSDM Kota Dumai siap melayani Anda.</p>
+        </div>
+    </section>
+
+    <!-- Content Area Kontak -->
+    <main class="public-layout" style="margin-top: 1rem;">
+        <section class="contact-section" style="max-width: 1100px; margin: 0 auto 3rem; padding: 0;">
+            <div class="contact-layout-grid">
+                <!-- Info Kontak Kantor -->
+                <div class="contact-info-card">
+                    <h3>Informasi Kontak Resmi</h3>
+                    <p>Silakan hubungi kami melalui saluran komunikasi resmi di bawah ini atau kunjungi kantor operasional kami.</p>
+
+                    <div class="contact-detail-list">
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i class="ph-fill ph-map-pin"></i></div>
+                            <div>
+                                <strong>Alamat Kantor</strong>
+                                <p>Jl. HR. Soebrantas, Kompleks Perkantoran Pemko Dumai, Riau</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i class="ph-fill ph-phone-call"></i></div>
+                            <div>
+                                <strong>Telepon Direct</strong>
+                                <p>(0765) 31002 / 0812-7000-8800</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i class="ph-fill ph-envelope"></i></div>
+                            <div>
+                                <strong>Email Resmi</strong>
+                                <p>bkpsdm@dumaikota.go.id</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i class="ph-fill ph-clock"></i></div>
+                            <div>
+                                <strong>Jam Operasional</strong>
+                                <p>Senin - Jumat | 07.30 - 16.00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/6281270008800?text=Halo%20Admin%20BKPSDM%20Kota%20Dumai,%20saya%20ingin%20bertanya%20informasi" target="_blank" rel="noopener noreferrer" class="btn-wa-helpdesk">
+                        <i class="ph-fill ph-whatsapp-logo"></i> Chat Helpdesk WhatsApp
+                    </a>
+                </div>
+
+                <!-- Formulir Kirim Pesan -->
+                <div class="contact-form-card">
+                    <h3>Kirim Pesan Langsung</h3>
+                    <form id="publicContactForm" onsubmit="handlePublicContactSubmit(event)">
+                        <div class="form-group">
+                            <label for="contactName">Nama Lengkap</label>
+                            <input type="text" id="contactName" placeholder="Masukkan nama Anda" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email / Nomor WhatsApp</label>
+                            <input type="text" id="contactEmail" placeholder="contoh@email.com atau 0812xxx" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">Subjek / Topik</label>
+                            <input type="text" id="contactSubject" placeholder="Subjek pertanyaan Anda" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Isi Pesan</label>
+                            <textarea id="contactMessage" rows="4" placeholder="Tuliskan pertanyaan atau informasi yang Anda butuhkan..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary w-full">
+                            Kirim Pesan <i class="ph-bold ph-paper-plane-tilt"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Public -->
+    <footer class="footer">
+        <div class="footer-glow"></div>
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <div class="logo-icon-wrapper" style="width:48px; height:48px;">
+                        <img src="assets/img/logo-bkpsdm.jpg" alt="Logo BKPSDM Dumai" class="logo-img">
+                    </div>
+                    <h4>BKPSDM Kota Dumai</h4>
+                </div>
+                <p>Membantu Walikota melaksanakan fungsi penunjang urusan pemerintahan bidang kepegawaian serta pengembangan sumber daya manusia.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Tautan Cepat</h4>
+                <div class="footer-links">
+                    <a href="index.html"><i class="ph ph-caret-right"></i> Direktori Staf</a>
+                    <a href="faq.html"><i class="ph ph-caret-right"></i> F&Q / Bantuan</a>
+                    <a href="kontak.html"><i class="ph ph-caret-right"></i> Hubungi Kami</a>
+                    <a href="login.html"><i class="ph ph-caret-right"></i> Portal Admin</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak Kantor</h4>
+                <div class="contact-item">
+                    <i class="ph ph-map-pin"></i>
+                    <span>Jl. HR. Soebrantas, Dumai, Riau</span>
+                </div>
+                <div class="contact-item">
+                    <i class="ph ph-envelope-simple"></i>
+                    <span>bkpsdm@dumaikota.go.id</span>
+                </div>
+                <div class="contact-item">
+                    <i class="ph ph-phone"></i>
+                    <span>(0765) 31002 / 0812-7000-8800</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BKPSDM Kota Dumai. All rights reserved.</p>
+            <a href="login.html" class="btn-login-footer">
+                <i class="ph ph-lock-key"></i> Login Admin
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

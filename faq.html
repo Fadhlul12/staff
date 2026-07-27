@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F&Q / Bantuan - BKPSDM Kota Dumai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="public-page">
+
+    <!-- Navbar Public -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon-wrapper">
+                    <img src="assets/img/logo-bkpsdm.jpg" alt="Logo BKPSDM Dumai" class="logo-img">
+                </div>
+                <div>
+                    <span class="logo-title">BKPSDM Kota Dumai</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Direktori Staf</a>
+                <a href="faq.html" class="active">F&Q / Bantuan</a>
+                <a href="kontak.html">Hubungi Kami</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://bkpsdm.dumaikota.go.id" target="_blank" class="btn-back-main">
+                    <i class="ph ph-arrow-left"></i> Web Utama Dumai
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Halaman FAQ -->
+    <section class="public-hero">
+        <div class="hero-content">
+            <div class="badge-subtitle">
+                <i class="ph-fill ph-question"></i> Pusat Bantuan Informasi
+            </div>
+            <h1>Pertanyaan yang Sering Diajukan (FAQ)</h1>
+            <p>Jawaban resmi seputar pemantauan status kehadiran, direktori staf, dan layanan kepegawaian BKPSDM Kota Dumai.</p>
+        </div>
+    </section>
+
+    <!-- Content Area FAQ -->
+    <main class="public-layout" style="margin-top: 1rem;">
+        <section class="faq-section" style="max-width: 950px; margin: 0 auto 3rem; padding: 0;">
+            <div class="faq-accordion-container">
+                <div class="faq-item active">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span><i class="ph-fill ph-check-circle"></i> Bagaimana cara mengecek status kehadiran staf hari ini?</span>
+                        <i class="ph-bold ph-caret-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Anda dapat membuka menu <strong>Direktori Staf</strong>, lalu mencari nama atau jabatan staf melalui kolom pencarian, atau menggunakan filter status untuk menyaring pegawai yang sedang <strong>Di Kantor</strong>, <strong>Dinas Luar</strong>, maupun <strong>Cuti</strong> secara real-time.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span><i class="ph-fill ph-clock"></i> Apa saja jam kerja operasional pelayanan BKPSDM Kota Dumai?</span>
+                        <i class="ph-bold ph-caret-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Jam operasional kantor resmi adalah <strong>Senin s.d. Jumat pukul 07.30 - 16.00 WIB</strong>. Selama jam operasional tersebut, status kehadiran pegawai terpantau secara aktif.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span><i class="ph-fill ph-chats-teardrop"></i> Bagaimana cara menghubungi pejabat atau staf tertentu?</span>
+                        <i class="ph-bold ph-caret-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Pada kartu profil pegawai di Halaman Utama, klik tombol <strong>"Lihat Detail"</strong>. Di dalam modal detail yang muncul, tersedia tombol komunikasi langsung ke WhatsApp, telepon direct, atau email resmi staf tersebut.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span><i class="ph-fill ph-user-gear"></i> Bagaimana jika terdapat perubahan data atau foto profil staf?</span>
+                        <i class="ph-bold ph-caret-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Pembaruan data dan foto profil dikelola terpusat oleh Admin Kepegawaian melalui menu <strong>Login Admin</strong> di portal resmi BKPSDM Kota Dumai.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Public -->
+    <footer class="footer">
+        <div class="footer-glow"></div>
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <div class="logo-icon-wrapper" style="width:48px; height:48px;">
+                        <img src="assets/img/logo-bkpsdm.jpg" alt="Logo BKPSDM Dumai" class="logo-img">
+                    </div>
+                    <h4>BKPSDM Kota Dumai</h4>
+                </div>
+                <p>Membantu Walikota melaksanakan fungsi penunjang urusan pemerintahan bidang kepegawaian serta pengembangan sumber daya manusia.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Tautan Cepat</h4>
+                <div class="footer-links">
+                    <a href="index.html"><i class="ph ph-caret-right"></i> Direktori Staf</a>
+                    <a href="faq.html"><i class="ph ph-caret-right"></i> F&Q / Bantuan</a>
+                    <a href="kontak.html"><i class="ph ph-caret-right"></i> Hubungi Kami</a>
+                    <a href="login.html"><i class="ph ph-caret-right"></i> Portal Admin</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak Kantor</h4>
+                <div class="contact-item">
+                    <i class="ph ph-map-pin"></i>
+                    <span>Jl. HR. Soebrantas, Dumai, Riau</span>
+                </div>
+                <div class="contact-item">
+                    <i class="ph ph-envelope-simple"></i>
+                    <span>bkpsdm@dumaikota.go.id</span>
+                </div>
+                <div class="contact-item">
+                    <i class="ph ph-phone"></i>
+                    <span>(0765) 31002 / 0812-7000-8800</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BKPSDM Kota Dumai. All rights reserved.</p>
+            <a href="login.html" class="btn-login-footer">
+                <i class="ph ph-lock-key"></i> Login Admin
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
