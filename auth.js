@@ -79,13 +79,19 @@ function updateSidebarIcon(isCollapsed) {
 
 function initSidebarState() {
     const isMobile = window.innerWidth <= 768;
-    if (isMobile) return; // Pada HP sidebar tersembunyi secara default (drawer overlay)
+    if (isMobile) return;
 
+    // Reset preference yang sempat membuat sidebar tertutup/tergencet
     const isCollapsed = localStorage.getItem('bkpsdm_sidebar_collapsed') === 'true';
     const layout = document.querySelector('.dashboard-layout');
-    if (layout && isCollapsed) {
-        layout.classList.add('sidebar-collapsed');
-        updateSidebarIcon(true);
+    if (layout) {
+        if (isCollapsed) {
+            layout.classList.add('sidebar-collapsed');
+            updateSidebarIcon(true);
+        } else {
+            layout.classList.remove('sidebar-collapsed');
+            updateSidebarIcon(false);
+        }
     }
 }
 

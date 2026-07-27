@@ -148,6 +148,15 @@ ul { list-style: none; }
     white-space: nowrap;
 }
 
+.dashboard-layout.sidebar-collapsed .dashboard-sidebar {
+    width: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-right: none !important;
+    opacity: 0;
+    pointer-events: none;
+}
+
 /* Sidebar Overlay Backdrop for Mobile */
 .sidebar-overlay {
     position: fixed;
