@@ -56,11 +56,15 @@ function toggleSidebar() {
     const layout = document.querySelector('.dashboard-layout');
     if (!layout) return;
     
-    layout.classList.toggle('sidebar-collapsed');
-    const isCollapsed = layout.classList.contains('sidebar-collapsed');
-    
-    localStorage.setItem('bkpsdm_sidebar_collapsed', isCollapsed ? 'true' : 'false');
-    updateSidebarIcon(isCollapsed);
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+        layout.classList.toggle('sidebar-mobile-open');
+    } else {
+        layout.classList.toggle('sidebar-collapsed');
+        const isCollapsed = layout.classList.contains('sidebar-collapsed');
+        localStorage.setItem('bkpsdm_sidebar_collapsed', isCollapsed ? 'true' : 'false');
+        updateSidebarIcon(isCollapsed);
+    }
 }
 
 function updateSidebarIcon(isCollapsed) {
@@ -74,6 +78,9 @@ function updateSidebarIcon(isCollapsed) {
 }
 
 function initSidebarState() {
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) return; // Pada HP sidebar tersembunyi secara default (drawer overlay)
+
     const isCollapsed = localStorage.getItem('bkpsdm_sidebar_collapsed') === 'true';
     const layout = document.querySelector('.dashboard-layout');
     if (layout && isCollapsed) {
