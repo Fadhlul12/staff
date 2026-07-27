@@ -101,9 +101,11 @@ function requireAuth() {
     }
     
     // Inisialisasi status sidebar saat halaman admin dimuat
-    document.addEventListener('DOMContentLoaded', initSidebarState);
-    return session;
-}
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSidebarState);
+    } else {
+        initSidebarState();
+    }
     return session;
 }
 
