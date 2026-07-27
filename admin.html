@@ -52,12 +52,18 @@
         <main class="dashboard-content">
             <!-- Header -->
             <header class="dashboard-header">
-                <div class="search-bar">
-                    <i class="ph ph-magnifying-glass"></i>
-                    <input type="text" id="searchInput" placeholder="Cari nama atau jabatan pegawai...">
-                    <button class="search-clear-btn" id="adminSearchClear" onclick="clearAdminSearch()" style="display:none;" title="Hapus pencarian">
-                        <i class="ph-bold ph-x"></i>
+                <div style="display: flex; align-items: center; gap: 1rem; flex-grow: 1;">
+                    <button class="btn-toggle-sidebar" id="btnToggleSidebar" onclick="toggleSidebar()" title="Sembunyikan/Tampilkan Sidebar">
+                        <i class="ph-bold ph-list" id="sidebarToggleIcon"></i>
                     </button>
+
+                    <div class="search-bar" style="flex-grow: 1;">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <input type="text" id="searchInput" placeholder="Cari nama atau jabatan pegawai...">
+                        <button class="search-clear-btn" id="adminSearchClear" onclick="clearAdminSearch()" style="display:none;" title="Hapus pencarian">
+                            <i class="ph-bold ph-x"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="header-actions">

@@ -50,6 +50,39 @@ function clearSession() {
 }
 
 // =========================================================
+// SIDEBAR TOGGLE FEATURE
+// =========================================================
+function toggleSidebar() {
+    const layout = document.querySelector('.dashboard-layout');
+    if (!layout) return;
+    
+    layout.classList.toggle('sidebar-collapsed');
+    const isCollapsed = layout.classList.contains('sidebar-collapsed');
+    
+    localStorage.setItem('bkpsdm_sidebar_collapsed', isCollapsed ? 'true' : 'false');
+    updateSidebarIcon(isCollapsed);
+}
+
+function updateSidebarIcon(isCollapsed) {
+    const icon = document.getElementById('sidebarToggleIcon');
+    if (!icon) return;
+    if (isCollapsed) {
+        icon.className = 'ph-bold ph-sidebar-simple';
+    } else {
+        icon.className = 'ph-bold ph-list';
+    }
+}
+
+function initSidebarState() {
+    const isCollapsed = localStorage.getItem('bkpsdm_sidebar_collapsed') === 'true';
+    const layout = document.querySelector('.dashboard-layout');
+    if (layout && isCollapsed) {
+        layout.classList.add('sidebar-collapsed');
+        updateSidebarIcon(true);
+    }
+}
+
+// =========================================================
 // AUTH GUARD: Dipanggil di admin.html
 // Jika tidak ada sesi, redirect ke login
 // =========================================================
@@ -59,6 +92,11 @@ function requireAuth() {
         window.location.href = 'login.html';
         return null;
     }
+    
+    // Inisialisasi status sidebar saat halaman admin dimuat
+    document.addEventListener('DOMContentLoaded', initSidebarState);
+    return session;
+}
     return session;
 }
 

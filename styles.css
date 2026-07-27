@@ -143,30 +143,42 @@ ul { list-style: none; }
     padding: 1.5rem 1rem;
     z-index: 100;
     box-shadow: 2px 0 12px rgba(0,0,0,0.04);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    white-space: nowrap;
 }
-.sidebar-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 2rem; padding: 0 0.5rem; }
-.logo-subtitle { font-size: 0.75rem; color: #f97316; font-weight: 700; letter-spacing: 0.04em; }
-.sidebar-nav { display: flex; flex-direction: column; gap: 0.3rem; flex-grow: 1; }
-.nav-section-title { font-size: 0.65rem; text-transform: uppercase; font-weight: 700; color: #a8a29e; letter-spacing: 0.08em; margin: 1rem 0 0.4rem 0.5rem; }
-.nav-item {
+
+/* Sidebar Collapsed State */
+.dashboard-layout.sidebar-collapsed .dashboard-sidebar {
+    width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-right: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn-toggle-sidebar {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-pill);
+    border: 1.5px solid #e7e5e4;
+    background: #ffffff;
+    color: #57534e;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 14px;
-    border-radius: var(--radius-md);
-    font-weight: 600;
-    font-size: 0.92rem;
-    color: #57534e;
-    transition: var(--transition);
-    border: none;
-    text-decoration: none;
+    justify-content: center;
+    font-size: 1.2rem;
     cursor: pointer;
-    background: transparent;
+    transition: var(--transition);
+    flex-shrink: 0;
 }
-.nav-item:hover { background: #fff7ed; color: #f97316; }
-.nav-item.active { background: #fff7ed; color: #f97316; font-weight: 700; border-left: 3px solid #f97316; }
-.sidebar-footer { margin-top: auto; border-top: 1px solid #e7e5e4; padding-top: 1rem; }
-.nav-item.logout { color: #ef4444; } .nav-item.logout:hover { background: #fef2f2; color: #dc2626; }
+
+.btn-toggle-sidebar:hover {
+    background: #fff7ed;
+    color: #f97316;
+    border-color: #fed7aa;
+}
 
 .dashboard-content { flex-grow: 1; display: flex; flex-direction: column; height: 100vh; overflow-y: auto; position: relative; background: #fffbf5; }
 .dashboard-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #ffffff; border-bottom: 2px solid #e7e5e4; position: sticky; top: 0; z-index: 50; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
