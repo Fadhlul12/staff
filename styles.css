@@ -931,10 +931,11 @@ ul { list-style: none; }
    QUICK STATUS TOGGLE (1-KLIK UNTUK ADMIN)
    ========================================================= */
 .quick-status-bar {
-    display: flex;
-    gap: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
     background: #f1f5f9;
-    padding: 3px;
+    padding: 4px;
     border-radius: var(--radius-md);
     margin-top: auto;
     margin-bottom: 1rem;
@@ -942,13 +943,12 @@ ul { list-style: none; }
     width: 100%;
 }
 .status-btn {
-    flex: 1;
     border: none;
     background: transparent;
-    padding: 6px 2px;
-    border-radius: 6px;
+    padding: 8px 4px;
+    border-radius: 8px;
     font-family: inherit;
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     font-weight: 700;
     color: var(--text-muted);
     cursor: pointer;
@@ -956,7 +956,7 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3px;
+    gap: 4px;
     min-height: 0 !important;
     height: auto !important;
     white-space: nowrap;
