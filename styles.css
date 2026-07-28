@@ -419,11 +419,11 @@ ul { list-style: none; }
 }
 .admin-staff-card .quick-status-bar {
     margin-top: auto; /* push to bottom area */
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     flex-wrap: wrap; /* in case it needs to wrap on very small screens */
 }
 .admin-staff-card .btn-detail {
-    margin-top: 0;
+    margin-top: 0.5rem;
     width: 100%;
 }
 
