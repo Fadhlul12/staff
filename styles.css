@@ -349,8 +349,77 @@ ul { list-style: none; }
 .btn-detail { width: 100%; padding: 11px 16px; background: var(--primary); color: white; font-weight: 700; border-radius: var(--radius-pill); font-size: 0.9rem; border: none; cursor: pointer; transition: var(--transition); display: flex; align-items: center; justify-content: center; gap: 6px; }
 .btn-detail:hover { background: var(--primary-hover); transform: translateY(-1px); box-shadow: 0 6px 16px var(--primary-glow); }
 
+/* Admin Specific Staff Card Layout */
+.admin-staff-card {
+    padding: 0;
+    border-radius: var(--radius-lg);
+    border: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    position: relative;
+    overflow: hidden;
+}
+.admin-staff-card::before { display: none !important; }
+.admin-staff-card .card-header-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 90px;
+    background: #f97316; /* Orange Theme */
+    z-index: 0;
+}
+.admin-staff-card .status-badge {
+    color: white; border-color: rgba(255,255,255,0.4);
+    background: rgba(0,0,0,0.2); backdrop-filter: blur(4px);
+}
+.admin-staff-card .avatar-wrapper {
+    margin-top: 45px;
+    margin-bottom: 0.25rem;
+    position: relative;
+    z-index: 2;
+}
+.admin-staff-card .avatar-placeholder {
+    width: 80px; height: 80px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.admin-staff-card .card-body {
+    padding: 0 1.25rem 1.25rem;
+}
+.admin-staff-card .staff-name {
+    font-size: 1.1rem; margin-top: 0.25rem; margin-bottom: 0;
+}
+.admin-staff-card .staff-role {
+    font-size: 0.8rem; margin-bottom: 1.25rem;
+}
+.admin-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.admin-contact-grid .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    color: #64748b;
+    font-weight: 600;
+}
+.admin-contact-grid .contact-item i {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+.admin-staff-card .btn-detail {
+    margin-top: 0.5rem;
+}
+
 /* Admin Actions (Edit/Delete) on Card */
 .admin-actions { position: absolute; top: 1.25rem; right: 1.25rem; z-index: 3; display: flex; gap: 8px; }
+.admin-staff-card .admin-actions .action-btn { background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.4); }
+.admin-staff-card .admin-actions .action-btn:hover { background: #ffffff; }
+.admin-staff-card .admin-actions .btn-edit:hover { color: #2563eb; }
+.admin-staff-card .admin-actions .btn-delete:hover { color: #ef4444; }
 .action-btn { width: 34px; height: 34px; min-height: 0 !important; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.1rem !important; transition: var(--transition); color: white; }
 .btn-edit { background-color: var(--primary); box-shadow: 0 4px 10px rgba(245,158,11,0.3); }
 .btn-delete { background-color: #ef4444; box-shadow: 0 4px 10px rgba(239,68,68,0.3); }

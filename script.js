@@ -129,9 +129,11 @@ function renderStaffCards(filterStatus = 'semua', keyword = null) {
 
         const avatarOnClick = isAdminMode ? `onclick="triggerDirectPhotoUpload(${staff.id})"` : '';
 
+        const adminCardClass = isAdminMode ? 'admin-staff-card' : '';
         const cardHTML = `
-            <article class="staff-card" style="animation-delay: ${index * 60}ms">
-                <span class="status-badge ${cls}">${text}</span>
+            <article class="staff-card ${adminCardClass}" style="animation-delay: ${index * 60}ms">
+                ${isAdminMode ? '<div class="card-header-bg"></div>' : ''}
+                ${!isAdminMode ? `<span class="status-badge ${cls}">${text}</span>` : ''}
                 ${adminButtons}
                 <div class="avatar-wrapper">
                     <div class="avatar-placeholder ${avatarClickableClass}" ${avatarOnClick}>
@@ -142,10 +144,19 @@ function renderStaffCards(filterStatus = 'semua', keyword = null) {
                 <div class="card-body">
                     <h3 class="staff-name">${staff.name}</h3>
                     <p class="staff-role">${staff.role}</p>
+                    ${isAdminMode ? `
+                    <div class="admin-contact-grid">
+                        <div class="contact-item"><i class="ph-fill ph-phone-call"></i> <span>${staff.phone || '0812-7000-8800'}</span></div>
+                        <div class="contact-item"><i class="ph-fill ph-envelope-simple"></i> <span>${staff.email || 'info@bkpsdmdumai.go.id'}</span></div>
+                        <div class="contact-item"><i class="ph-fill ph-map-pin"></i> <span>BKPSDM Dumai</span></div>
+                        <div class="contact-item"><i class="ph-fill ph-clock"></i> <span>${staff.time}</span></div>
+                    </div>
+                    ` : ''}
                     ${quickStatusSelector}
+                    ${!isAdminMode ? `
                     <div class="working-hours">
                         <i class="ph-fill ph-clock"></i> ${staff.time}
-                    </div>
+                    </div>` : ''}
                     <button class="btn-detail" onclick="showDetail(${staff.id})">
                         Lihat Detail <i class="ph-bold ph-arrow-right"></i>
                     </button>
