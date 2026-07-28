@@ -148,6 +148,65 @@ ul { list-style: none; }
     white-space: nowrap;
 }
 
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+}
+.sidebar-logo .logo-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #1c1917;
+    display: block;
+}
+.sidebar-logo .logo-subtitle {
+    font-size: 0.75rem;
+    color: #f97316;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    display: block;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex-grow: 1;
+}
+.nav-section-title {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #a8a29e;
+    letter-spacing: 0.08em;
+    margin: 1rem 0 0.4rem 0.5rem;
+}
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: #57534e;
+    transition: var(--transition);
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+}
+.nav-item i { font-size: 1.1rem; }
+.nav-item:hover { background: #fff7ed; color: #f97316; }
+.nav-item.active { background: #fff7ed; color: #f97316; font-weight: 700; }
+.nav-item.active i { color: #f97316; }
+.sidebar-footer { margin-top: auto; border-top: 1px solid #e7e5e4; padding-top: 1rem; }
+.nav-item.logout { color: #ef4444; width: 100%; justify-content: flex-start; }
+.nav-item.logout:hover { background: #fef2f2; color: #dc2626; }
+
 .dashboard-layout.sidebar-collapsed .dashboard-sidebar {
     width: 0 !important;
     padding-left: 0 !important;
@@ -1980,24 +2039,6 @@ body.public-page {
     .dashboard-layout.sidebar-mobile-open .dashboard-sidebar {
         transform: translateX(0);
     }
-    .sidebar-logo {
-        margin-bottom: 1.5rem;
-    }
-    .sidebar-nav {
-        flex-direction: column;
-        gap: 0.3rem;
-    }
-    .nav-section-title {
-        display: block;
-    }
-    .nav-item {
-        padding: 10px 14px;
-        font-size: 0.92rem;
-    }
-    .nav-item.active {
-        border-left: 3px solid #f97316;
-        border-bottom: none;
-    }
     .dashboard-content {
         height: 100vh;
         overflow-y: auto;
@@ -2019,6 +2060,7 @@ body.public-page {
         gap: 1rem;
     }
 }
+
 
 @media (max-width: 768px) {
     .hero-stats {
