@@ -433,12 +433,19 @@ ul { list-style: none; }
     flex-shrink: 0;
 }
 .admin-staff-card .quick-status-bar {
-    margin-top: auto; /* push to bottom area */
-    margin-bottom: 1.25rem;
-    flex-wrap: wrap; /* in case it needs to wrap on very small screens */
+    margin-top: auto;
+    margin-bottom: 0;
+    border-radius: 10px;
+    padding: 5px;
+    gap: 5px;
+    align-items: stretch;
+}
+.admin-staff-card .status-btn {
+    padding: 10px 6px;
+    border-radius: 8px;
 }
 .admin-staff-card .btn-detail {
-    margin-top: 0.5rem;
+    margin-top: 1.25rem;
     width: 100%;
 }
 
