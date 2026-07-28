@@ -436,12 +436,12 @@ ul { list-style: none; }
     margin-top: auto;
     margin-bottom: 0;
     border-radius: 10px;
-    padding: 5px;
-    gap: 5px;
+    padding: 6px;
+    gap: 6px;
     align-items: stretch;
 }
 .admin-staff-card .status-btn {
-    padding: 10px 6px;
+    padding: 10px 10px;
     border-radius: 8px;
 }
 .admin-staff-card .btn-detail {
