@@ -145,11 +145,8 @@ function renderStaffCards(filterStatus = 'semua', keyword = null) {
                     <h3 class="staff-name">${staff.name}</h3>
                     <p class="staff-role">${staff.role}</p>
                     ${isAdminMode ? `
-                    <div class="admin-contact-grid">
-                        <div class="contact-item"><i class="ph-fill ph-phone-call"></i> <span>${staff.phone || '0812-7000-8800'}</span></div>
-                        <div class="contact-item"><i class="ph-fill ph-envelope-simple"></i> <span>${staff.email || 'info@bkpsdmdumai.go.id'}</span></div>
-                        <div class="contact-item"><i class="ph-fill ph-map-pin"></i> <span>BKPSDM Dumai</span></div>
-                        <div class="contact-item"><i class="ph-fill ph-clock"></i> <span>${staff.time}</span></div>
+                    <div class="admin-working-hours">
+                        <i class="ph-fill ph-clock"></i> <span>${staff.time}</span>
                     </div>
                     ` : ''}
                     ${quickStatusSelector}

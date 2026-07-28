@@ -390,6 +390,21 @@ ul { list-style: none; }
 .admin-staff-card .staff-role {
     font-size: 0.8rem; margin-bottom: 1.25rem;
 }
+.admin-working-hours {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f97316;
+    background: #fff7ed;
+    padding: 6px 16px;
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    border: 1px solid #fed7aa;
+}
+.admin-working-hours i { font-size: 1rem; }
 .admin-contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
