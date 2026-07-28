@@ -485,30 +485,20 @@ function showDetail(id) {
     const genderIconEl = detailModal.querySelector('#detailGenderIcon');
     if (genderIconEl) genderIconEl.className = `ph-fill ${staff.gender === 'female' ? 'ph-gender-female' : 'ph-gender-male'}`;
 
-    // Kontak Pegawai (WA, Telepon, Email)
-    const phone = staff.phone || '0812-7000-8800';
+    // Kontak Pegawai (WA ke Admin, Email)
+    const adminPhone = '0812-7000-8800';
+    const cleanAdminPhone = '6281270008800';
     const email = staff.email || (staff.name ? `${staff.name.split(' ')[0].toLowerCase().replace(/[^a-z]/g, '')}@bkpsdmdumai.go.id` : 'info@bkpsdmdumai.go.id');
 
-    let cleanPhone = phone.replace(/\D/g, '');
-    if (cleanPhone.startsWith('0')) {
-        cleanPhone = '62' + cleanPhone.substring(1);
-    }
-
     const btnWa = detailModal.querySelector('#detailBtnWa');
-    const btnPhone = detailModal.querySelector('#detailBtnPhone');
     const btnEmail = detailModal.querySelector('#detailBtnEmail');
 
     const waVal = detailModal.querySelector('#detailWaVal');
-    const phoneVal = detailModal.querySelector('#detailPhoneVal');
     const emailVal = detailModal.querySelector('#detailEmailVal');
 
     if (btnWa) {
-        btnWa.href = `https://wa.me/${cleanPhone}?text=${encodeURIComponent('Halo ' + staff.name + ', saya ingin berkomunikasi terkait layanan BKPSDM Kota Dumai.')}`;
-        if (waVal) waVal.innerText = phone;
-    }
-    if (btnPhone) {
-        btnPhone.href = `tel:${phone.replace(/\D/g, '')}`;
-        if (phoneVal) phoneVal.innerText = phone;
+        btnWa.href = `https://wa.me/${cleanAdminPhone}?text=${encodeURIComponent('Halo Admin BKPSDM, saya ingin bertanya terkait pegawai: ' + staff.name + ' (' + staff.role + ').')}`;
+        if (waVal) waVal.innerText = adminPhone;
     }
     if (btnEmail) {
         btnEmail.href = `mailto:${email}?subject=${encodeURIComponent('BKPSDM Dumai - Pertanyaan/Komunikasi dengan ' + staff.name)}`;
