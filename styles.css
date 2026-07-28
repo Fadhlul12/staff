@@ -405,13 +405,26 @@ ul { list-style: none; }
     font-size: 0.72rem;
     color: #64748b;
     font-weight: 600;
+    min-width: 0; /* allows child truncation */
+}
+.admin-contact-grid .contact-item span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .admin-contact-grid .contact-item i {
     color: #94a3b8;
     font-size: 0.9rem;
+    flex-shrink: 0;
+}
+.admin-staff-card .quick-status-bar {
+    margin-top: auto; /* push to bottom area */
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /* in case it needs to wrap on very small screens */
 }
 .admin-staff-card .btn-detail {
-    margin-top: 0.5rem;
+    margin-top: 0;
+    width: 100%;
 }
 
 /* Admin Actions (Edit/Delete) on Card */
@@ -904,11 +917,11 @@ ul { list-style: none; }
    ========================================================= */
 .quick-status-bar {
     display: flex;
-    gap: 4px;
+    gap: 2px;
     background: #f1f5f9;
-    padding: 4px;
+    padding: 3px;
     border-radius: var(--radius-md);
-    margin-top: 0.75rem;
+    margin-top: auto;
     margin-bottom: 1rem;
     border: 1px solid #e2e8f0;
     width: 100%;
@@ -917,10 +930,10 @@ ul { list-style: none; }
     flex: 1;
     border: none;
     background: transparent;
-    padding: 8px 4px;
-    border-radius: 8px;
+    padding: 6px 2px;
+    border-radius: 6px;
     font-family: inherit;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 700;
     color: var(--text-muted);
     cursor: pointer;
@@ -928,9 +941,10 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 3px;
     min-height: 0 !important;
     height: auto !important;
+    white-space: nowrap;
 }
 .status-btn i { font-size: 0.85rem; }
 .status-btn:hover { background: rgba(255,255,255,0.6); color: var(--secondary); }
