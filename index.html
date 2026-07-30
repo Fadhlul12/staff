@@ -31,13 +31,12 @@
                 </div>
             </div>
             <nav class="nav-links">
-                <a href="index.html" class="active">Direktori Staf</a>
-                <a href="faq.html">F&Q / Bantuan</a>
-                <a href="kontak.html">Hubungi Kami</a>
+                <a href="index.html" class="active btn-nav-active">Direktori Staf</a>
+                <a href="faq.html">FAQ / Bantuan</a>
             </nav>
             <div class="nav-actions">
-                <a href="https://bkpsdm.dumaikota.go.id" target="_blank" class="btn-back-main">
-                    <i class="ph ph-arrow-left"></i> BACK/KEMBALI
+                <a href="https://bkpsdm.dumaikota.go.id" target="_blank" class="btn-back-framed">
+                    <i class="ph ph-arrow-left"></i> Kembali
                 </a>
             </div>
         </div>
@@ -52,36 +51,58 @@
             <h1>Direktori Staf & Kehadiran Pegawai</h1>
             <p>Informasi resmi mengenai jajaran pejabat, staf, dan pegawai BKPSDM Kota Dumai beserta pemantauan status kehadiran real-time.</p>
 
-            <!-- Hero Live Stats Banner -->
+            <!-- Hero Search Bar (Centered, Semi-transparent) -->
+            <div class="hero-search-wrapper">
+                <div class="search-bar hero-search-bar">
+                    <i class="ph ph-magnifying-glass search-icon-left"></i>
+                    <input type="text" id="publicSearchInput" placeholder="Cari Nama Staf..." spellcheck="false" autocomplete="off">
+                    <button class="search-clear-btn" id="publicSearchClear" onclick="clearPublicSearch()" style="display:none;" title="Hapus pencarian">
+                        <i class="ph-bold ph-x"></i>
+                    </button>
+                </div>
+                <!-- Live Search Suggestion Dropdown -->
+                <div class="search-suggestions-dropdown" id="searchSuggestionsDropdown"></div>
+                <!-- Search Feedback Text Indicator -->
+                <div class="search-feedback-bar" id="searchFeedbackBar" style="display:none;"></div>
+            </div>
+
+            <!-- Hero Live Stats Banner (Frosted Glass Cards) -->
             <div class="hero-stats">
                 <div class="hero-stat-card">
                     <div class="stat-icon total"><i class="ph-fill ph-users-three"></i></div>
                     <div class="stat-info">
-                        <span class="stat-number" id="stat-total">0</span>
+                        <span class="stat-number" id="stat-total">8</span>
                         <span class="stat-label">Total Staf</span>
                     </div>
                 </div>
                 <div class="hero-stat-card">
                     <div class="stat-icon kantor"><i class="ph-fill ph-buildings"></i></div>
                     <div class="stat-info">
-                        <span class="stat-number" id="stat-dikantor">0</span>
+                        <span class="stat-number" id="stat-dikantor">3</span>
                         <span class="stat-label">Di Kantor</span>
                     </div>
                 </div>
                 <div class="hero-stat-card">
                     <div class="stat-icon dinas"><i class="ph-fill ph-briefcase"></i></div>
                     <div class="stat-info">
-                        <span class="stat-number" id="stat-luar">0</span>
+                        <span class="stat-number" id="stat-luar">2</span>
                         <span class="stat-label">Dinas Luar</span>
                     </div>
                 </div>
                 <div class="hero-stat-card">
                     <div class="stat-icon cuti"><i class="ph-fill ph-calendar-x"></i></div>
                     <div class="stat-info">
-                        <span class="stat-number" id="stat-cuti">0</span>
+                        <span class="stat-number" id="stat-cuti">3</span>
                         <span class="stat-label">Cuti</span>
                     </div>
                 </div>
+            </div>
+
+            <!-- CTA Button (Bottom Center Hero) -->
+            <div class="hero-cta-wrapper">
+                <a href="#staff-container" class="btn-hero-cta">
+                    Lihat Daftar Pegawai <span class="arrow-down">↓↓</span>
+                </a>
             </div>
         </div>
     </section>
@@ -89,17 +110,8 @@
     <!-- Main Content Area -->
     <main class="main-container public-layout">
         
-        <!-- Search Bar & Filter Public -->
+        <!-- Filter Bar Public -->
         <div class="public-controls">
-            <div class="search-bar public-search-bar">
-                <i class="ph ph-magnifying-glass"></i>
-                <input type="text" id="publicSearchInput" placeholder="Cari nama atau jabatan pegawai...">
-                <button class="search-clear-btn" id="publicSearchClear" onclick="clearPublicSearch()" style="display:none;" title="Hapus pencarian">
-                    <i class="ph-bold ph-x"></i>
-                </button>
-            </div>
-
-            <!-- Filter Bar Public -->
             <div class="filter-bar glass-panel public-filter">
                 <div class="filter-label">
                     <i class="ph-fill ph-faders"></i> Status Kehadiran:
@@ -247,8 +259,7 @@
                 <h4>Tautan Cepat</h4>
                 <div class="footer-links">
                     <a href="index.html"><i class="ph ph-caret-right"></i> Direktori Staf</a>
-                    <a href="faq.html"><i class="ph ph-caret-right"></i> F&Q / Bantuan</a>
-                    <a href="kontak.html"><i class="ph ph-caret-right"></i> Hubungi Kami</a>
+                    <a href="faq.html"><i class="ph ph-caret-right"></i> FAQ / Bantuan</a>
                     <a href="login.html"><i class="ph ph-caret-right"></i> Portal Admin</a>
                 </div>
             </div>

@@ -2,16 +2,16 @@
 // DATA STAFF (Tersimpan di localStorage agar permanen)
 // =========================================================
 const staffData = [
-  { id: 1, name: "Drs. Bambang Wijaya, M.Si", role: "Kepala Badan BKPSDM Kota Contoh", status: "dikantor", statusText: "Di Kantor", time: "07.30-16.00 Wib", gender: "male", phone: "0812-1111-0001", email: "bambang.wijaya@bkpsdmcontoh.go.id" },
-  { id: 2, name: "Sri Handayani, S.Sos., M.A.P", role: "Sekretaris BKPSDM Kota Contoh", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "female", phone: "0813-2222-0002", email: "sri.handayani@bkpsdmcontoh.go.id" },
-  { id: 3, name: "Rudi Hartono, SKM., M.Si", role: "Kabid Pengadaan, Pemberhentian dan Informasi", status: "luarkantor", statusText: "Dinas Luar", time: "07.30-16.00 Wib", gender: "male", phone: "0821-3333-0003", email: "rudi.hartono@bkpsdmcontoh.go.id" },
-  { id: 4, name: "Dedi Kurniawan, S.Sos", role: "Kabid Mutasi dan Kepangkatan", status: "dikantor", statusText: "Di Kantor", time: "07.30-16.00 Wib", gender: "male", phone: "0852-4444-0004", email: "dedi.kurniawan@bkpsdmcontoh.go.id" },
-  { id: 5, name: "Yusuf Firmansyah, S.T., MM", role: "Kabid Pengembangan, Penilaian Kinerja dan Penghargaan", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "male", phone: "0812-5555-0005", email: "yusuf.firmansyah@bkpsdmcontoh.go.id" },
-  { id: 6, name: "Rina Marlina, S.Sos., M.Si", role: "Kasubbag Tata Usaha", status: "dikantor", statusText: "Di Kantor", time: "07.30-16.00 Wib", gender: "female", phone: "0813-6666-0006", email: "rina.marlina@bkpsdmcontoh.go.id" },
-  { id: 7, name: "Fitri Ramadhani, S.Psi., M.Si", role: "Kasubbag Perencanaan, Keuangan dan Aset", status: "luarkantor", statusText: "Dinas Luar", time: "07.30-16.00 Wib", gender: "female", phone: "0822-7777-0007", email: "fitri.ramadhani@bkpsdmcontoh.go.id" },
-  { id: 8, name: "Agus Salim", role: "Subbag Perencanaan, Keuangan dan Aset", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "male", phone: "0853-8888-0008", email: "agus.salim@bkpsdmcontoh.go.id" },
+  { id: 1, name: "Drs. Bambang Wijaya, M.Si", role: "Kepala Badan BKPSDM Kota Dumai", status: "dikantor", statusText: "Di Kantor", time: "07.30-16.00 Wib", gender: "male", phone: "0812-1111-0001", email: "bambang.wijaya@bkpsdmdumai.go.id" },
+  { id: 2, name: "Sri Handayani, S.Sos., M.A.P", role: "Sekretaris BKPSDM Kota Dumai", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "female", phone: "0813-2222-0002", email: "sri.handayani@bkpsdmdumai.go.id" },
+  { id: 3, name: "Rudi Hartono, SKM., M.Si", role: "Kabid Pengadaan, Pemberhentian dan Informasi", status: "luarkantor", statusText: "Dinas Luar", time: "07.30-16.00 Wib", gender: "male", phone: "0821-3333-0003", email: "rudi.hartono@bkpsdmdumai.go.id" },
+  { id: 4, name: "Dedi Kurniawan, S.Sos", role: "Kabid Mutasi dan Kepangkatan", status: "dikantor", statusText: "Di Kantor", time: "07.30-16.00 Wib", gender: "male", phone: "0852-4444-0004", email: "dedi.kurniawan@bkpsdmdumai.go.id" },
+  { id: 5, name: "Yusuf Firmansyah, S.T., MM", role: "Kabid Pengembangan, Penilaian Kinerja dan Penghargaan", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "male", phone: "0812-5555-0005", email: "yusuf.firmansyah@bkpsdmdumai.go.id" },
+  { id: 6, name: "Rina Marlina, S.Sos., M.Si", role: "Kasubbag Tata Usaha", status: "dikantor", statusText: "Di Kantor", time: "07.30-16.00 Wib", gender: "female", phone: "0813-6666-0006", email: "rina.marlina@bkpsdmdumai.go.id" },
+  { id: 7, name: "Fitri Ramadhani, S.Psi., M.Si", role: "Kasubbag Perencanaan, Keuangan dan Aset", status: "luarkantor", statusText: "Dinas Luar", time: "07.30-16.00 Wib", gender: "female", phone: "0822-7777-0007", email: "fitri.ramadhani@bkpsdmdumai.go.id" },
+  { id: 8, name: "Agus Salim", role: "Subbag Perencanaan, Keuangan dan Aset", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "male", phone: "0853-8888-0008", email: "agus.salim@bkpsdmdumai.go.id" },
 ];
-const DATA_VERSION = 'v2';
+const DATA_VERSION = 'v3';
 
 // Ambil data dari localStorage. Jika belum ada, pakai data default.
 function getData() {
@@ -72,6 +72,18 @@ function renderStaffCards(filterStatus = 'semua', keyword = null) {
             s.name.toLowerCase().includes(q) ||
             s.role.toLowerCase().includes(q)
         );
+    }
+
+    // Feedback Pencarian (Indikator Teks di Bawah Search Bar)
+    const feedbackBar = document.getElementById('searchFeedbackBar');
+    if (feedbackBar) {
+        if (q) {
+            feedbackBar.style.display = 'inline-flex';
+            feedbackBar.innerHTML = `<i class="ph-bold ph-magnifying-glass"></i> Menampilkan <strong>${filteredData.length}</strong> staf untuk "<strong>${currentSearch}</strong>"`;
+        } else {
+            feedbackBar.style.display = 'none';
+            feedbackBar.innerHTML = '';
+        }
     }
 
     staffContainer.innerHTML = '';
@@ -253,7 +265,7 @@ if (radioFilters.length > 0) {
     });
 }
 
-// SEARCH (Live Search + Sinkron dengan Filter Status)
+// SEARCH (Live Search + Auto-Complete Dropdown + Sinkron dengan Filter Status)
 const searchInputs = document.querySelectorAll('.search-bar input');
 searchInputs.forEach(input => {
     input.addEventListener('input', (e) => {
@@ -261,11 +273,81 @@ searchInputs.forEach(input => {
         // Show or hide clear button
         const clearBtn = input.parentElement.querySelector('.search-clear-btn');
         if (clearBtn) {
-            clearBtn.style.display = keyword ? 'block' : 'none';
+            clearBtn.style.display = keyword ? 'flex' : 'none';
         }
         // Render ulang dengan filter status aktif + kata kunci baru
         renderStaffCards(currentFilter, keyword);
+
+        // Jika input berasal dari publicSearchInput, tampilkan dropdown saran
+        if (input.id === 'publicSearchInput') {
+            updateSearchSuggestions(keyword);
+        }
     });
+});
+
+// Auto-Complete Suggestions Dropdown Functions
+function updateSearchSuggestions(keyword) {
+    const dropdown = document.getElementById('searchSuggestionsDropdown');
+    if (!dropdown) return;
+
+    const q = keyword.toLowerCase().trim();
+    if (!q) {
+        dropdown.style.display = 'none';
+        dropdown.innerHTML = '';
+        return;
+    }
+
+    const data = getData();
+    const matches = data.filter(s =>
+        s.name.toLowerCase().includes(q) ||
+        s.role.toLowerCase().includes(q)
+    );
+
+    if (matches.length === 0) {
+        dropdown.style.display = 'block';
+        dropdown.innerHTML = `<div class="search-suggestion-item" style="color: #94a3b8; font-style: italic; cursor: default;">Tidak ada pegawai yang cocok</div>`;
+        return;
+    }
+
+    dropdown.style.display = 'block';
+    dropdown.innerHTML = matches.map(s => {
+        const { cls, text } = getStatusInfo(s.status);
+        const safeName = s.name.replace(/'/g, "\\'");
+        return `
+            <div class="search-suggestion-item" onclick="selectSuggestion(${s.id}, '${safeName}')">
+                <div class="suggestion-left">
+                    <div class="suggestion-name">${s.name}</div>
+                    <div class="suggestion-role">${s.role}</div>
+                </div>
+                <div class="suggestion-right">
+                    <span class="status-badge ${cls} suggestion-badge">${text}</span>
+                    <i class="ph-bold ph-caret-right suggestion-arrow"></i>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function selectSuggestion(id, name) {
+    const input = document.getElementById('publicSearchInput');
+    if (input) input.value = name;
+    const clearBtn = document.getElementById('publicSearchClear');
+    if (clearBtn) clearBtn.style.display = 'flex';
+
+    const dropdown = document.getElementById('searchSuggestionsDropdown');
+    if (dropdown) dropdown.style.display = 'none';
+
+    renderStaffCards(currentFilter, name);
+    showDetail(id);
+}
+
+// Tutup dropdown suggestion jika klik di luar search bar
+document.addEventListener('click', (e) => {
+    const searchWrapper = document.querySelector('.hero-search-wrapper');
+    const dropdown = document.getElementById('searchSuggestionsDropdown');
+    if (dropdown && searchWrapper && !searchWrapper.contains(e.target)) {
+        dropdown.style.display = 'none';
+    }
 });
 
 // Clear functions for public and admin search bars
@@ -274,6 +356,11 @@ function clearPublicSearch() {
     if (input) input.value = '';
     const btn = document.getElementById('publicSearchClear');
     if (btn) btn.style.display = 'none';
+    const dropdown = document.getElementById('searchSuggestionsDropdown');
+    if (dropdown) {
+        dropdown.style.display = 'none';
+        dropdown.innerHTML = '';
+    }
     renderStaffCards(currentFilter, '');
 }
 
