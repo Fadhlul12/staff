@@ -1,21 +1,22 @@
 // =========================================================
 // DATA STAFF (Tersimpan di localStorage agar permanen)
 // =========================================================
-const defaultData = [
-    { id: 1, name: "H. Erinasrizal, S.Sos., M.Si", role: "Kepala Badan BKPSDM Kota Dumai", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "male", phone: "0812-7589-1001", email: "erinasrizal@bkpsdmdumai.go.id" },
-    { id: 2, name: "Ramuddin Syah, S.Sos., M.A.P", role: "Sekretaris BKPSDM Kota Dumai", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "male", phone: "0813-6431-2002", email: "ramuddin@bkpsdmdumai.go.id" },
-    { id: 3, name: "Zaki, SKM., M.Si", role: "Kabid Pengadaan, Pemberhentian dan Informasi", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "male", phone: "0821-7890-3003", email: "zaki@bkpsdmdumai.go.id" },
-    { id: 4, name: "Khaidir, S.Sos", role: "Kabid Mutasi dan Kepangkatan", status: "dikantor", statusText: "Di Kantor", time: "07.30-16.00 Wib", gender: "male", phone: "0852-6543-4004", email: "khaidir@bkpsdmdumai.go.id" },
-    { id: 5, name: "Andri Mayuza, S.T.,MM", role: "Kabid Pengembangan, Penilaian Kinerja dan Penghargaan", status: "luarkantor", statusText: "Dinas Luar", time: "07.30-16.00 Wib", gender: "male", phone: "0812-8901-5005", email: "andri.mayuza@bkpsdmdumai.go.id" },
-    { id: 6, name: "Neneng Lestari, S.Sos., M.Si", role: "Kasubbag Tata Usaha", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "female", phone: "0813-7123-6006", email: "neneng.lestari@bkpsdmdumai.go.id" },
-    { id: 7, name: "Dwi Fifi Dasriyanti, S.Psi., M.Si", role: "Kasubbag Perencanaan, Keuangan dan Aset", status: "dikantor", statusText: "Di Kantor", time: "07.30-16.00 Wib", gender: "female", phone: "0822-8345-7007", email: "dwififi@bkpsdmdumai.go.id" },
-    { id: 8, name: "Aprizal", role: "Subbag Perencanaan, Keuangan dan Aset", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "male", phone: "0853-9012-8008", email: "aprizal@bkpsdmdumai.go.id" }
+const staffData = [
+  { id: 1, name: "Drs. Bambang Wijaya, M.Si", role: "Kepala Badan BKPSDM Kota Contoh", status: "dikantor", statusText: "Di Kantor", time: "07.30-16.00 Wib", gender: "male", phone: "0812-1111-0001", email: "bambang.wijaya@bkpsdmcontoh.go.id" },
+  { id: 2, name: "Sri Handayani, S.Sos., M.A.P", role: "Sekretaris BKPSDM Kota Contoh", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "female", phone: "0813-2222-0002", email: "sri.handayani@bkpsdmcontoh.go.id" },
+  { id: 3, name: "Rudi Hartono, SKM., M.Si", role: "Kabid Pengadaan, Pemberhentian dan Informasi", status: "luarkantor", statusText: "Dinas Luar", time: "07.30-16.00 Wib", gender: "male", phone: "0821-3333-0003", email: "rudi.hartono@bkpsdmcontoh.go.id" },
+  { id: 4, name: "Dedi Kurniawan, S.Sos", role: "Kabid Mutasi dan Kepangkatan", status: "dikantor", statusText: "Di Kantor", time: "07.30-16.00 Wib", gender: "male", phone: "0852-4444-0004", email: "dedi.kurniawan@bkpsdmcontoh.go.id" },
+  { id: 5, name: "Yusuf Firmansyah, S.T., MM", role: "Kabid Pengembangan, Penilaian Kinerja dan Penghargaan", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "male", phone: "0812-5555-0005", email: "yusuf.firmansyah@bkpsdmcontoh.go.id" },
+  { id: 6, name: "Rina Marlina, S.Sos., M.Si", role: "Kasubbag Tata Usaha", status: "dikantor", statusText: "Di Kantor", time: "07.30-16.00 Wib", gender: "female", phone: "0813-6666-0006", email: "rina.marlina@bkpsdmcontoh.go.id" },
+  { id: 7, name: "Fitri Ramadhani, S.Psi., M.Si", role: "Kasubbag Perencanaan, Keuangan dan Aset", status: "luarkantor", statusText: "Dinas Luar", time: "07.30-16.00 Wib", gender: "female", phone: "0822-7777-0007", email: "fitri.ramadhani@bkpsdmcontoh.go.id" },
+  { id: 8, name: "Agus Salim", role: "Subbag Perencanaan, Keuangan dan Aset", status: "cuti", statusText: "Cuti", time: "07.30-16.00 Wib", gender: "male", phone: "0853-8888-0008", email: "agus.salim@bkpsdmcontoh.go.id" },
 ];
+const DATA_VERSION = 'v2';
 
 // Ambil data dari localStorage. Jika belum ada, pakai data default.
 function getData() {
     const stored = localStorage.getItem('bkpsdm_staff');
-    return stored ? JSON.parse(stored) : defaultData;
+    return stored ? JSON.parse(stored) : staffData;
 }
 
 // Simpan data ke localStorage.
@@ -23,9 +24,10 @@ function saveToStorage(data) {
     localStorage.setItem('bkpsdm_staff', JSON.stringify(data));
 }
 
-// Inisialisasi data jika localStorage masih kosong
-if (!localStorage.getItem('bkpsdm_staff')) {
-    saveToStorage(defaultData);
+// Inisialisasi / reset data jika versi berubah atau localStorage kosong
+if (localStorage.getItem('bkpsdm_data_version') !== DATA_VERSION) {
+    saveToStorage(staffData);
+    localStorage.setItem('bkpsdm_data_version', DATA_VERSION);
 }
 
 // =========================================================
@@ -250,8 +252,6 @@ if (radioFilters.length > 0) {
         });
     });
 }
-
-// SEARCH (Live Search + Sinkron dengan Filter Status)
 
 // SEARCH (Live Search + Sinkron dengan Filter Status)
 const searchInputs = document.querySelectorAll('.search-bar input');

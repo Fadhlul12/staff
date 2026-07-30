@@ -2092,7 +2092,15 @@ body.public-page {
         white-space: nowrap;
     }
     .nav-actions {
-        display: none; /* Sembunyikan tombol tambahan di navbar HP agar ringkas */
+        width: 100%;
+        justify-content: center;
+        padding-bottom: 0.4rem;
+        border-top: 1px solid #f0edf9;
+        padding-top: 0.4rem;
+    }
+    .btn-back-main {
+        font-size: 0.78rem;
+        padding: 5px 12px;
     }
 
     /* Hero Section HP */
